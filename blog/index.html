@@ -214,6 +214,7 @@ ul{list-style:none}
   content:''; position:absolute; inset:0; border-radius:18px;
   background: linear-gradient(135deg, rgba(108,71,255,.06), transparent);
   opacity: 0; transition: opacity var(--t);
+  pointer-events: none;
 }
 .blog-card:hover { border-color: rgba(108,71,255,.35); transform: translateY(-5px); box-shadow: 0 24px 60px rgba(0,0,0,.35); }
 .blog-card:hover::after { opacity:1; }
