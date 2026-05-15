@@ -314,9 +314,36 @@ h3 { font-size: 1.25rem; font-weight: 700; }
 
 .about-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1.2fr;
   gap: 5rem;
   align-items: center;
+}
+
+.about-image-wrap {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  border: 1px solid var(--clr-border);
+}
+
+.about-portrait {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: grayscale(1) contrast(1.1);
+  transition: var(--transition);
+}
+
+.about-portrait:hover {
+  filter: grayscale(0.2) contrast(1);
+  transform: scale(1.05);
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
 }
 
 .about-text h2 { margin-bottom: 1.5rem; }
