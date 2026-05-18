@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore the portfolio and works of Mishab Ali – Digital Marketing Expert in Calicut." />
+  <title>My Works | Mishab Ali – Digital Marketing Expert</title>
+  <link rel="icon" type="image/png" href="assets/images/img_14edd912d1c576ac32ae36a9069dfe90.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  
+  <style>
+    :root {
+      --clr-bg: #07090f;
+      --clr-surface: #0f1218;
+      --clr-surface2: #161b25;
+      --clr-accent: #6c47ff;
+      --clr-accent2: #00d4aa;
+      --clr-text: #e8eaf0;
+      --clr-muted: #8a8fa8;
+      --clr-border: rgba(255, 255, 255, 0.07);
+      --font-display: 'Syne', sans-serif;
+      --font-body: 'DM Sans', sans-serif;
+      --radius: 16px;
+      --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      background: var(--clr-bg);
+      color: var(--clr-text);
+      font-family: var(--font-body);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    ul { list-style: none; }
+
+    .container { width: 90%; max-width: 1200px; margin: 0 auto; }
+    .section { padding: 6rem 0; }
+    .center { text-align: center; }
+
+    h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.15; }
+    h1 { font-size: clamp(2.4rem, 5vw, 4.2rem); font-weight: 800; }
+    h2 { font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 700; }
+    h3 { font-size: 1.25rem; font-weight: 700; }
+
+    .section-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--clr-accent2);
+      margin-bottom: 0.75rem;
+      display: block;
+    }
+
+    .section-title { margin-bottom: 3rem; color: var(--clr-text); }
+    .accent { color: var(--clr-accent); }
+
+    .btn {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      padding: 0.85rem 2rem; border-radius: 50px;
+      font-family: var(--font-display); font-weight: 600; font-size: 0.95rem;
+      cursor: pointer; transition: var(--transition);
+      border: 2px solid transparent; white-space: nowrap;
+    }
+    .btn-primary {
+      background: var(--clr-accent); color: #fff;
+      box-shadow: 0 0 30px rgba(108, 71, 255, 0.35);
+    }
+    .btn-primary:hover {
+      background: #7e5fff; box-shadow: 0 0 45px rgba(108, 71, 255, 0.55);
+      transform: translateY(-2px);
+    }
+
+    /* NAVBAR */
+    .navbar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      padding: 1.2rem 0; transition: var(--transition);
+    }
+    .navbar.scrolled {
+      background: rgba(7, 9, 15, 0.92); backdrop-filter: blur(20px);
+      padding: 0.8rem 0; border-bottom: 1px solid var(--clr-border);
+    }
+    .nav-inner {
+      width: 90%; max-width: 1200px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .logo {
+      font-family: var(--font-display); font-size: 1.4rem; font-weight: 800;
+      letter-spacing: -0.02em; color: var(--clr-text);
+      display: flex; align-items: center; gap: 0.5rem;
+    }
+    .logo span { color: var(--clr-accent); }
+    .logo-avatar {
+      width: 36px; height: 36px; border-radius: 50%;
+      object-fit: cover; object-position: top center;
+      border: 2px solid var(--clr-accent);
+      box-shadow: 0 0 10px rgba(108, 71, 255, 0.4);
+    }
+    .nav-links { display: flex; align-items: center; gap: 2rem; }
+    .nav-links a {
+      font-weight: 500; font-size: 0.9rem; color: var(--clr-muted);
+      transition: color var(--transition);
+    }
+    .nav-links a:hover, .nav-links a.active { color: var(--clr-text); }
+    .nav-cta {
+      background: var(--clr-accent); color: #fff !important;
+      padding: 0.55rem 1.4rem; border-radius: 50px;
+      font-weight: 600 !important;
+      transition: background var(--transition), box-shadow var(--transition) !important;
+    }
+    .nav-cta:hover {
+      background: #7e5fff !important; box-shadow: 0 0 20px rgba(108, 71, 255, 0.4);
+    }
+    .hamburger {
+      display: none; flex-direction: column; gap: 5px; background: none;
+      border: none; cursor: pointer; padding: 0.5rem;
+    }
+    .hamburger span {
+      display: block; width: 24px; height: 2px;
+      background: var(--clr-text); border-radius: 2px; transition: var(--transition);
+    }
+
+    /* PAGE HEADER */
+    .page-header {
+      padding: 10rem 0 4rem;
+      text-align: center;
+      position: relative;
+    }
+    .page-header .blob {
+      position: absolute;
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, var(--clr-accent), transparent 70%);
+      top: -200px; left: 50%; transform: translateX(-50%);
+      filter: blur(100px); opacity: 0.2; pointer-events: none;
+      z-index: -1;
+    }
+    .page-header p {
+      color: var(--clr-muted);
+      max-width: 600px;
+      margin: 1.5rem auto 0;
+      font-size: 1.1rem;
+    }
+
+    /* WORKS GRID */
+    .works-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2.5rem;
+      padding-bottom: 6rem;
+    }
+    
+    .work-card {
+      background: var(--clr-surface2);
+      border: 1px solid var(--clr-border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .work-card:hover {
+      border-color: rgba(108, 71, 255, 0.4);
+      transform: translateY(-4px);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+    }
+
+    .work-img-wrap {
+      width: 100%;
+      height: 280px;
+      overflow: hidden;
+      position: relative;
+    }
+    
+    .work-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+      background: #111;
+    }
+    
+    .work-card:hover .work-img-wrap img {
+      transform: scale(1.05);
+    }
+    
+    .work-content {
+      padding: 2rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .work-tags {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 1rem;
+    }
+    
+    .work-tag {
+      display: inline-block;
+      background: rgba(0, 212, 170, 0.1);
+      color: var(--clr-accent2);
+      border: 1px solid rgba(0, 212, 170, 0.25);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.8rem;
+      border-radius: 50px;
+    }
+
+    .work-content h3 {
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+    }
+
+    .work-content p {
+      color: var(--clr-muted);
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+      flex: 1;
+    }
+    
+    .work-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--clr-accent);
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: gap var(--transition);
+      margin-top: auto;
+    }
+    
+    .work-link:hover {
+      gap: 0.8rem;
+    }
+
+    /* FOOTER */
+    .footer {
+      background: #04050a; border-top: 1px solid var(--clr-border);
+      padding: 4rem 0 2rem;
+    }
+    .footer-grid {
+      display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem;
+    }
+    .footer-brand p {
+      color: var(--clr-muted); font-size: 0.9rem; margin-top: 1rem; max-width: 280px;
+    }
+    .footer-brand .logo { margin-bottom: 0.5rem; }
+    .footer-links h4 {
+      font-family: var(--font-display); font-size: 0.85rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.12em; color: var(--clr-muted); margin-bottom: 1.2rem;
+    }
+    .footer-links ul { display: flex; flex-direction: column; gap: 0.7rem; }
+    .footer-links a { color: var(--clr-muted); font-size: 0.88rem; transition: color var(--transition); }
+    .footer-links a:hover { color: var(--clr-accent); }
+    .social-link {
+      display: block; color: var(--clr-muted); font-size: 0.88rem;
+      margin-bottom: 0.7rem; transition: color var(--transition);
+    }
+    .social-link:hover { color: var(--clr-accent2); }
+    .footer-bottom {
+      border-top: 1px solid var(--clr-border); padding-top: 1.5rem;
+      text-align: center; color: var(--clr-muted); font-size: 0.82rem;
+    }
+
+    /* ANIMATIONS */
+    .reveal {
+      opacity: 0; transform: translateY(30px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible { opacity: 1; transform: none; }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .nav-links {
+        position: fixed; top: 0; right: -100%; width: 280px; height: 100vh;
+        background: rgba(7, 9, 15, 0.98); backdrop-filter: blur(20px);
+        flex-direction: column; justify-content: center; padding: 2rem;
+        transition: right var(--transition); border-left: 1px solid var(--clr-border);
+      }
+      .nav-links.open { right: 0; }
+      .hamburger { display: flex; z-index: 1001; }
+      
+      .works-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 480px) {
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">
+        <img src="assets/images/img_14edd912d1c576ac32ae36a9069dfe90.png" alt="Mishab Ali" class="logo-avatar" />
+        Mishab<span>Ali</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="works.html" class="active">Works</a></li>
+        <li><a href="blog/">Blog</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#contact" class="nav-cta">Get in Touch</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header">
+    <div class="blob"></div>
+    <div class="container">
+      <span class="section-label">Portfolio</span>
+      <h1>My <span class="accent">Selected Works</span></h1>
+      <p>A showcase of my recent projects, campaigns, and digital marketing success stories.</p>
+    </div>
+  </section>
+
+  <!-- WORKS GRID -->
+  <section class="section pt-0">
+    <div class="container">
+      <div class="works-grid">
+        
+        <!-- Project 1 -->
+        <article class="work-card reveal">
+          <div class="work-img-wrap">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800" alt="E-commerce SEO Growth" />
+          </div>
+          <div class="work-content">
+            <div class="work-tags">
+              <span class="work-tag" style="background: rgba(108, 71, 255, 0.1); color: var(--clr-accent); border-color: rgba(108, 71, 255, 0.25);">SEO</span>
+              <span class="work-tag">Content</span>
+            </div>
+            <h3>E-commerce Organic Growth Strategy</h3>
+            <p>Achieved a 240% increase in organic traffic and a 150% boost in revenue over 6 months through technical SEO optimization, keyword targeting, and a robust content marketing strategy.</p>
+            <a href="#" class="work-link">View Case Study &rarr;</a>
+          </div>
+        </article>
+        
+        <!-- Project 2 -->
+        <article class="work-card reveal">
+          <div class="work-img-wrap">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800" alt="Meta Ads Campaign" />
+          </div>
+          <div class="work-content">
+            <div class="work-tags">
+              <span class="work-tag" style="background: rgba(255, 80, 100, 0.1); color: #ff6b80; border-color: rgba(255, 80, 100, 0.25);">Meta Ads</span>
+              <span class="work-tag" style="background: rgba(240, 165, 0, 0.1); color: #f0a500; border-color: rgba(240, 165, 0, 0.25);">Lead Gen</span>
+            </div>
+            <h3>High-Converting Meta Ads Campaign</h3>
+            <p>Designed and managed a targeted Facebook and Instagram ad campaign for a B2B SaaS client, reducing cost-per-lead (CPL) by 45% while doubling the lead volume.</p>
+            <a href="#" class="work-link">View Case Study &rarr;</a>
+          </div>
+        </article>
+        
+        <!-- Project 3 -->
+        <article class="work-card reveal">
+          <div class="work-img-wrap">
+            <img src="https://images.unsplash.com/photo-1555421689-d68471e189f2?auto=format&fit=crop&q=80&w=800" alt="AI Marketing Automation" />
+          </div>
+          <div class="work-content">
+            <div class="work-tags">
+              <span class="work-tag" style="background: rgba(100, 200, 255, 0.1); color: #64c8ff; border-color: rgba(100, 200, 255, 0.25);">Automation</span>
+              <span class="work-tag" style="background: rgba(108, 71, 255, 0.1); color: var(--clr-accent); border-color: rgba(108, 71, 255, 0.25);">Email</span>
+            </div>
+            <h3>AI-Driven Marketing Automation</h3>
+            <p>Implemented a highly personalized email and WhatsApp marketing automation sequence using AI tools, resulting in a 35% higher open rate and a 20% increase in conversions.</p>
+            <a href="#" class="work-link">View Case Study &rarr;</a>
+          </div>
+        </article>
+
+        <!-- Project 4 -->
+        <article class="work-card reveal">
+          <div class="work-img-wrap">
+            <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=800" alt="Social Media Rebranding" />
+          </div>
+          <div class="work-content">
+            <div class="work-tags">
+              <span class="work-tag" style="background: rgba(240, 165, 0, 0.1); color: #f0a500; border-color: rgba(240, 165, 0, 0.25);">Social Media</span>
+              <span class="work-tag">Branding</span>
+            </div>
+            <h3>Lifestyle Brand Social Revamp</h3>
+            <p>Completely overhauled the social media presence for a lifestyle brand. Increased engagement rate by 300% and grew their follower base by 15k authentic followers within 3 months.</p>
+            <a href="#" class="work-link">View Case Study &rarr;</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <div class="center reveal">
+        <h2>Want to see similar results for your business?</h2>
+        <p style="color: var(--clr-muted); margin: 1rem 0 2rem;">Let's discuss how we can elevate your digital presence.</p>
+        <a href="https://wa.me/919747407450" class="btn btn-primary" target="_blank" rel="noopener">Chat on WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <img src="assets/images/img_14edd912d1c576ac32ae36a9069dfe90.png" alt="Mishab Ali" class="logo-avatar" />
+            Mishab<span>Ali</span>
+          </a>
+          <p>Best Digital Marketing Expert in Calicut helping businesses grow with smart, AI-powered strategies.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="works.html">Works</a></li>
+            <li><a href="blog/">Blog</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Blog</h4>
+          <ul>
+            <li><a href="blog/future-digital-marketing.html">Future of Digital Marketing</a></li>
+            <li><a href="blog/why-seo-still-king.html">Why SEO Still Reigns</a></li>
+            <li><a href="blog/social-media-marketing.html">Social Media in 2025</a></li>
+            <li><a href="blog/evolution-of-advertising.html">Evolution of Advertising</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Connect</h4>
+          <a href="https://wa.me/919747407450" target="_blank" rel="noopener" class="social-link">WhatsApp</a>
+          <a href="./index.html" target="_blank" rel="noopener" class="social-link">mishabali.com</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Mishab Ali. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+    }, { passive: true });
+
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    if (hamburger && navLinks) {
+      hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+      });
+      navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => navLinks.classList.remove('open'));
+      });
+    }
+
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), i * 80);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
